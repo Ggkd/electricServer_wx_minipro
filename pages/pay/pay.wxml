@@ -1,0 +1,19 @@
+<view class="page-body">
+  <view class="page-section">
+    <view class="weui-cells__title">账号：</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" bindinput="get_account" type="number" placeholder="账号" />
+      </view>
+    </view>
+  </view>
+ <view class="page-section">
+    <view class="weui-cells__title">金额</view>
+    <view class="weui-cells weui-cells_after-title">
+      <view class="weui-cell weui-cell_input">
+        <input class="weui-input" bindinput="get_money" type="number" placeholder="金额" />
+      </view>
+    </view>
+  </view>
+  <button catchtap="pay">缴费</button>
+</view>

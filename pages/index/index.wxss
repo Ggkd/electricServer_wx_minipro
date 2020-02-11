@@ -1,1 +1,44 @@
-/* miniprogram/pages/index/index.wxss */
+page {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.header image {
+  width: 200rpx;
+  height: 200rpx;
+}
+
+.inputs {
+  margin: 50rpx;
+  padding: 10rpx 10rpx;
+  border: 1rpx solid #e0e0e0;
+  border-radius: 10rpx;
+}
+
+.inputs input {
+  padding: 10rpx 15rpx;
+}
+
+.inputs .username {
+  border-bottom: 1rpx solid #e0e0e0;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.buttons button {
+  margin: 10rpx 0;
+}

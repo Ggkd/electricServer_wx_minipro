@@ -1,30 +1,15 @@
-<view class="page-body">
-  <view class="page-section">
-    <view class="weui-cells__title">户主名：</view>
-    <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell weui-cell_input">
-        <input class="weui-input" bindinput="get_name" auto-focus placeholder="户主名"/>
-      </view>
+<form bindsubmit="loginHandle">
+  <view class="container">
+    <view class="header">
+      <image src="../../images/sign.png" mode="aspectFit" />
+    </view>
+    <view class="inputs">
+      <input class="username" name="username" placeholder="请输入用户名" />
+      <input class="password" type="password" name="password" placeholder="请输入密码" />
+    </view>
+    <view class="buttons">
+      <button type="primary" form-type="submit" bindTap='navigatorIndex'>登陆</button>
+      <button type="default">注册</button>
     </view>
   </view>
- 
-  <view class="page-section">
-    <view class="weui-cells__title">账号：</view>
-    <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell weui-cell_input">
-        <input class="weui-input" bindinput="get_account" type="number" placeholder="账号" />
-      </view>
-    </view>
-  </view>
-  <view class="page-section">
-    <view class="weui-cells__title">密码：</view>
-    <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell weui-cell_input">
-        <input class="weui-input" bindinput="get_password" password type="text" placeholder="密码" />
-      </view>
-    </view>
-  </view>
-
-  <button catchtap="register">注册</button>
-  <button catchtap="login">登录</button>
-</view>
+</form>

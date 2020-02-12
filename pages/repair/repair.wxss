@@ -1,0 +1,10 @@
+/* pages/repair/repair.wxss */
+.all{
+  padding:15px;
+}
+.van-cell{
+  margin-bottom:30px;
+}
+.van-button{
+  width: 340px;
+}

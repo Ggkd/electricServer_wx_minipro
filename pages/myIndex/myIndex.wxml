@@ -1,0 +1,59 @@
+<!--pages/myIndex/myIndex.wxml-->
+<text class="font1">我家</text>
+<view class="all">
+	<view class="content1">
+		<view class="top">
+			<view style="">
+				<i-icon type="addressbook" color="green" size="30" />
+			</view>
+			<view class="yue">
+				<text class="yue1">电费</text>
+				<view class="yue2">电费余额：2312元</view>
+			</view>
+			<view>
+				<mp-icon icon="arrow" color="gray" size="{{15}}"></mp-icon>
+			</view>
+		</view>
+		<text class="zhangdan">查看账单</text>
+	</view>
+	<text class='wenzi'>家电服务</text>
+	<view class="content2">
+		<view class="item" bindtap="navigatorSearch">
+			<view>
+				<mp-icon icon="search" color="gray" size="{{25}}"></mp-icon>
+			</view>
+			<text class="font">查询</text>
+		</view>
+		<view class="item" bindtap="navigatorElectric">
+			<view>
+				<mp-icon icon="imac" color="blue" size="{{25}}"></mp-icon>
+			</view>
+			<text class="font">新电</text>
+		</view>
+		<view class="item" bindtap="navigatorPay">
+			<view>
+				<i-icon type="financial_fill" size="25" color="rgb(254,176,52)" />
+			</view>
+			<text class="font">缴费</text>
+		</view>
+		<view class="item">
+			<view>
+				<mp-icon icon="note" color="rgb(238,114,66)" size="{{25}}"></mp-icon>
+			</view>
+			<text class="font">账单</text>
+		</view>
+		<view class="item" bindtap="navigatorRepair">
+			<view>
+				<i-icon type="tasklist" color="rgb(34,180,170)" size="{{25}}" />
+			</view>
+			<text class="font">维修</text>
+		</view>
+		<view class="item" bindtap="t">
+			<view>
+				<mp-icon icon="group-detail" color="rgb(250,73,79)" size="{{25}}"></mp-icon>
+			</view>
+			<text class="font">会员</text>
+		</view>
+	</view>
+</view>
+<van-toast id="van-toast" />

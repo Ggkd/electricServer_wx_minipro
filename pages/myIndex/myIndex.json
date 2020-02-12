@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "生活服务",
+  "usingComponents": {
+    "mp-icon": "../../components/icon/icon",
+    "i-icon": "../../dist/icon/index",
+    "van-toast": "../../dist1/toast/index"
+  
+  }
+}

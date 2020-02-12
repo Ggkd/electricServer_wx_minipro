@@ -1,0 +1,12 @@
+{
+  "navigationBarTitleText": "维修",
+  "usingComponents": {
+    "van-button": "../../dist1/button",
+    "van-cell": "../../dist1/cell/index",
+    "van-cell-group": "../../dist1/cell-group/index",
+    "van-icon": "../../dist1/icon/index",
+    "van-field": "../../dist1/field/index",
+    "van-action-sheet": "../../dist1/action-sheet/index",
+    "van-datetime-picker": "../../dist1/datetime-picker/index"
+  }
+}

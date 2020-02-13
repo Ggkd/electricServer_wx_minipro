@@ -1,18 +1,42 @@
 {
   "pages": [
+    "pages/myIndex/myIndex",
     "pages/index/index",
+    "pages/logs/logs",
+    
     "pages/pay/pay",
-    "pages/search/search"
-   
-   
+    "pages/search/search",
+    "pages/electric/electric",
+    "pages/repair/repair",
+    "pages/bill/bill",
+    "pages/my/my",
+    "pages/address/address",
+    "pages/success/success"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "登录",
+    "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "black"
   },
-  "sitemapLocation": "sitemap.json",
-  "style": "v2"
+  "tabBar": {
+    "color": "#626567",
+    "selectedColor": "#2A8CE5",
+    "backgroundColor": "#FBFBFB",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/myIndex/myIndex",
+        "text": "服务",
+        "iconPath": "images/index.png",
+        "selectedIconPath": "images/index_focus.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/discovery.png",
+        "selectedIconPath": "images/discovery_focus.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap49.json"
 }

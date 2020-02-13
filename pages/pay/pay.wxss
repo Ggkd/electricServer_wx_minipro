@@ -1,1 +1,91 @@
-/* miniprogram/pages/pay/pay.wxss */
+/* pages/pay/pay.wxss */
+.top{
+  background-color:rgb(255,255,255) ;
+  box-shadow: 1px 1px 0 0 #EBEBEB;
+  padding:15px;
+  display:flex;
+  align-items: center;
+  margin-bottom:10px;
+}
+.top .van-icon{
+  margin-right:15px;
+}
+.dianfei{
+  font-size:16px;
+  color:black;
+}
+.payAll{
+  background-color:rgb(255,255,255) ;
+  box-shadow: 1px 1px 0 0 #EBEBEB;
+}
+.payAll .van-cell .van-cell__title{
+  color:gray;
+}
+.payAll .vancell1 .van-cell__value{
+  font-size:20px;
+  color:black;
+  font-weight: 600;
+}
+.payAll .vancell1{
+  margin-bottom:20px;
+}
+.payAll .vancell1 .van-cell__title{
+  font-size:16px;
+  color:black;
+}
+.jiaofei{
+  padding:16px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.j1{
+  font-size:14px;
+  color:gray;
+}
+.j2 .van-button{
+  height: 20px;
+}
+.payPrice{
+  padding:15px;
+}
+.payPrice .f1{
+  font-size:16px;
+}
+.payPrice .box1{
+  margin:15px 0;
+  display:flex;
+  justify-content: space-between;
+}
+.payPrice .box1 .van-button{
+  width:100px;
+  height: 50px;
+  border-radius: 5px;
+}
+.allBtn{
+  padding:15px;
+}
+input{
+  width: 230px;
+  height: 43px;
+  padding-left:10px;
+  border:1px solid #EBEBEB;
+}
+.inpDiv{
+  position: relative;
+  display:flex;
+  align-items: center;
+}
+.inp{
+  display:block;
+  position: absolute;
+  left:210px;
+}
+.allBtn .van-button{
+  width: 345px;
+  margin-bottom:10px;
+  height: 47px;
+}
+.allBtn .van-button--hairline:after{
+  border:none;
+}

@@ -4,12 +4,13 @@
       <image src="../../images/sign.png" mode="aspectFit" />
     </view>
     <view class="inputs">
-      <input class="username" name="username" placeholder="请输入用户名" />
-      <input class="password" type="password" name="password" placeholder="请输入密码" />
+      <input class="username" bindinput="get_name" placeholder="请输入户主名"/>
+      <input class="username" bindinput="get_account" placeholder="请输入户号"/>
+      <input class="password" type="password" bindinput="get_password" placeholder="请输入密码"/>
     </view>
     <view class="buttons">
-      <button type="primary" form-type="submit" bindTap='navigatorIndex'>登陆</button>
-      <button type="default">注册</button>
+      <button type="primary" catchtap="login">登陆</button>
+      <button type="default" catchtap="register">注册</button>
     </view>
   </view>
 </form>

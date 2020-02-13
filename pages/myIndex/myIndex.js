@@ -88,6 +88,16 @@ Page({
       url: '../repair/repair',
     })
   },
+  navigatorBill(){
+    wx.navigateTo({
+      url: '../bill/bill',
+    })
+  },
+  navigatorMy(){
+    wx.navigateTo({
+      url: '../my/my',
+    })
+  },
 
 
   

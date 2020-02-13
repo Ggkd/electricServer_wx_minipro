@@ -1,0 +1,3 @@
+<!--pages/success/success.wxml-->
+<van-icon name="checked" size='60'></van-icon>
+<van-button type="info" size="big">完成</van-button>

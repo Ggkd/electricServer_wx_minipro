@@ -1,21 +1,26 @@
-<view class="page-body">
-  <view class="page-section">
-    <view class="weui-cells__title">户主名：</view>
-    <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell weui-cell_input">
-        <input class="weui-input" bindinput="get_name" auto-focus placeholder="户主名"/>
-      </view>
-    </view>
+<!--pages/search/search.wxml-->
+<view class="top">
+  <view class="t1">自动查询</view>
+  <text class="t2">根据你的个人信息自动查询账单</text>
+</view>
+<view class="center">
+  <view class="tupian">
+    <van-image width="60px" height="60px" src="https://img.yzcdn.cn/vant/cat.jpeg" />
   </view>
- 
-  <view class="page-section">
-    <view class="weui-cells__title">账号：</view>
-    <view class="weui-cells weui-cells_after-title">
-      <view class="weui-cell weui-cell_input">
-        <input class="weui-input" bindinput="get_account" type="number" placeholder="账号" />
-      </view>
-    </view>
+  <view class="info">
+    <view class="info1">小仙女</view>
+    <text class="info2">15667853245</text>
   </view>
-
-  <button catchtap="search">查询</button>
+  <view class="btn">
+    <van-button size="small" type="info">去查询</van-button>
+  </view>
+</view>
+<view class="footer">
+  <view class="inp">
+    <view class="font">输入户口查询</view>
+    <van-field placeholder="手动输入缴费户号查询账单" />
+  </view>
+  <view>
+    <van-button size="small" type="info">去查询</van-button>
+  </view>
 </view>

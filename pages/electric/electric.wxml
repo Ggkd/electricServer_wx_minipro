@@ -2,11 +2,11 @@
 <view class="all">
   <van-field
     value=""
-    placeholder="请输入家点名称"
+    placeholder="请输入家电名称"
     label="家电"
     left-icon="home-o"
   />
-  <van-cell is-link  bind:click="select1" title="币种" icon="gold-coin-o" value="美元"/>
+  <!-- <van-cell is-link  bind:click="select1" title="币种" icon="gold-coin-o" value="美元"/> -->
   <van-cell is-link bind:click="select2" title="网点" icon="location-o" value="青岛流亭国际机场"/>
   <van-cell is-link bind:click="select3" class="cell3" title="时间" icon="underway-o" value="最快3小时可取"/>
   <van-button type='info' large>开始预约</van-button>

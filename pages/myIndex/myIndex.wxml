@@ -2,7 +2,7 @@
 <text class="font1">我家</text>
 <view class="all">
 	<view class="content1">
-		<view class="top">
+		<view class="top" bindtap="navigatorMy">
 			<view style="">
 				<i-icon type="addressbook" color="green" size="30" />
 			</view>
@@ -14,7 +14,7 @@
 				<mp-icon icon="arrow" color="gray" size="{{15}}"></mp-icon>
 			</view>
 		</view>
-		<text class="zhangdan">查看账单</text>
+		<text class="zhangdan" bindtap="navigatorBill">查看账单</text>
 	</view>
 	<text class='wenzi'>家电服务</text>
 	<view class="content2">
@@ -36,7 +36,7 @@
 			</view>
 			<text class="font">缴费</text>
 		</view>
-		<view class="item">
+		<view class="item" bindtap="navigatorBill">
 			<view>
 				<mp-icon icon="note" color="rgb(238,114,66)" size="{{25}}"></mp-icon>
 			</view>

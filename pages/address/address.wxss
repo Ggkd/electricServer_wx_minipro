@@ -1,0 +1,21 @@
+/* pages/address/address.wxss */
+/* pages/electric/electric.wxss */
+.all{
+  padding:15px;
+}
+.van-cell{
+  margin-bottom:30px;
+}
+.van-button{
+  width: 340px;
+}
+.font{
+  padding:20px;
+  text-align: center;
+  width: 300px;
+  display:block;
+  margin-top:10px;
+  font-size:20px;
+  font-weight: 600;
+  color:black;
+}

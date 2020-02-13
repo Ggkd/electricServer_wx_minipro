@@ -36,7 +36,7 @@ page {
 }
 
 .buttons {
-  text-align: center;
+  margin: 50rpx 50rpx 100rpx 50rpx;
 }
 
 .buttons button {

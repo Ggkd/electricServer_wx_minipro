@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "我的",
+  "usingComponents": {
+    "van-image": "../../dist1/image/index",
+    "van-button": "../../dist1/button",
+    "van-field": "../../dist1/field/index",
+    "van-icon": "../../dist1/icon"
+  }
+}

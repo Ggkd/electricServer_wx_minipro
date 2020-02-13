@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "完成",
+  "usingComponents": {
+    "van-image": "../../dist1/image/index",
+    "van-button": "../../dist1/button",
+    "van-field": "../../dist1/field/index"
+  }
+}

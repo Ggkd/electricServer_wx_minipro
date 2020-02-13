@@ -1,0 +1,30 @@
+<!--pages/address/address.wxml-->
+<view class="all">
+<text class="font">请输入地址</text>
+  <van-field
+    value=""
+    placeholder="请输入地址"
+    label="地址"
+    left-icon="home-o"
+  />
+  <van-button type='info' large>完成</van-button>
+</view>
+
+<van-action-sheet
+  show="{{ show }}"
+  actions="{{ actions }}"
+  cancel-text="取消"
+  bind:cancel='can1'
+/>
+<van-action-sheet
+  show="{{ show1 }}"
+  actions="{{ actions1 }}"
+  cancel-text="取消"
+  bind:cancel='can2'
+/>
+<van-action-sheet
+  show="{{ show2 }}"
+  actions="{{ actions2 }}"
+  cancel-text="取消"
+  bind:cancel='can3'
+/>

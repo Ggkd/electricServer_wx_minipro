@@ -1,1 +1,67 @@
-/* miniprogram/pages/search/search.wxss */
+/* pages/search/search.wxss */
+.top{
+  padding:15px;
+  margin-top:20px;
+  background-color:rgb(255,255,255) ;
+  box-shadow: 1px 1px 0 0 #EBEBEB;
+}
+.t1{
+  font-size:18px;
+  color:black;
+  font-weight: 600;
+}
+.t2{
+  font-size:12px;
+  color:gray;
+}
+.center{
+  padding:15px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top:20px;
+  margin-bottom:40px;
+  background-color:rgb(255,255,255) ;
+  box-shadow: 1px 1px 0 0 #EBEBEB;
+}
+.info{
+  margin-left:-90px;
+  margin-top:-5px;
+}
+.info1{
+  font-size:18px;
+  color:black;
+  font-weight: 600;
+}
+.info .btn{
+  height: 26px;
+}
+.info2{
+  font-size:12px;
+  color:gray;
+}
+.van-button{
+  width: 80px;
+  height: 26px;
+}
+.van-button .van-button__text{
+  font-size:13px;
+}
+.footer{
+  padding:15px;
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:rgb(255,255,255) ;
+  box-shadow: 1px 1px 0 0 #EBEBEB;
+}
+.inp .field-index--van-field.van-cell{
+  margin-left:-16px;
+}
+.van-field{
+  padding-left:-10px;
+}
+.font{
+  font-weight: 550;
+  font-size:17px;
+}

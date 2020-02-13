@@ -1,3 +1,12 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "缴费",
+  "usingComponents": {
+    "i-cell-group": "../../dist/cell-group/index",
+    "i-cell": "../../dist/cell/index",
+    "van-button": "../../dist1/button",
+    "van-cell": "../../dist1/cell/index",
+    "van-cell-group": "../../dist1/cell-group/index",
+    "van-icon": "../../dist1/icon/index",
+    "van-field": "../../dist1/field/index"
+  }
 }

@@ -5,10 +5,10 @@
 </view>
 <view class="center">
   <view class="tupian">
-    <van-image width="60px" height="60px" src="https://img.yzcdn.cn/vant/cat.jpeg" />
+    <van-image width="60px" height="60px" src="{{userInfo.avatarUrl}}" />
   </view>
   <view class="info">
-    <view class="info1">小仙女</view>
+    <view class="info1">{{userInfo.nickName}}</view>
     <text class="info2">15667853245</text>
   </view>
   <view class="btn">

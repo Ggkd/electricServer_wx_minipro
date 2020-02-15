@@ -17,3 +17,14 @@
   font-size:10px;
   color:gray;
 }
+.van-center-enter-to.van-center-enter-active.van-popup.van-popup--center.van-popup--safe{
+  width: 350px;
+  height: 340px;
+}
+.name .van-field__input{
+  margin-left: 150px;
+}
+
+.van-cell__value {
+  margin-left: -48px;
+}

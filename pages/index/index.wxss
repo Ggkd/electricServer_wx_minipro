@@ -28,7 +28,7 @@ page {
 }
 
 .inputs input {
-  padding: 10rpx 15rpx;
+  padding: 15rpx 15rpx;
 }
 
 .inputs .username {

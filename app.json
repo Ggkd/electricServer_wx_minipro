@@ -3,7 +3,7 @@
     "pages/myIndex/myIndex",
     "pages/index/index",
     "pages/logs/logs",
-    
+   
     "pages/pay/pay",
     "pages/search/search",
     "pages/electric/electric",
@@ -11,7 +11,8 @@
     "pages/bill/bill",
     "pages/my/my",
     "pages/address/address",
-    "pages/success/success"
+    "pages/success/success",
+    "pages/yue/yue"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -38,5 +39,5 @@
       }
     ]
   },
-  "sitemapLocation": "sitemap49.json"
+  "sitemapLocation": "sitemap73.json"
 }

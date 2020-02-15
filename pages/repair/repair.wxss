@@ -8,3 +8,11 @@
 .van-button{
   width: 340px;
 }
+.van-center-enter-to.van-center-enter-active.van-popup.van-popup--center.van-popup--safe{
+  width: 350px;
+  height: 340px;
+}
+
+.name .van-field__input {
+  margin-left: 90px;
+}

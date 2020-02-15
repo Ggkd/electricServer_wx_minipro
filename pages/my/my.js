@@ -27,9 +27,14 @@ Page({
       url: '../bill/bill',
     })
   },
-  navigatorAddress(){
+  navigatorYue(){
     wx.navigateTo({
-      url: '../address/address',
+      url: '../yue/yue',
     })
   },
+  back(){
+    wx.navigateTo({
+      url: '../index/index',
+    })
+  }
 })

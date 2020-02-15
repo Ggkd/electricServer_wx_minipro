@@ -4,7 +4,7 @@
 </view>
 <view class="payAll">
     <van-cell class="vancell1" title="余额" value="84.6" />
-    <van-cell title="户号户名" value="易烊千玺" />
+    <van-cell title="户号户名" value="{{userInfo.nickName}}" />
     <van-cell title="住址信息" value="中国海洋大学" />
     <van-cell title="缴费单位" value="国网山东省电力公司" />
     <view class="jiaofei">
@@ -17,9 +17,9 @@
 <view class="payPrice">
     <text class='f1'>充值金额</text>
     <view class="box1">
-        <van-button plain type="info">50元</van-button>
-        <van-button plain color='rgb(218,218,218)' type="default">100元</van-button>
-        <van-button plain color='rgb(218,218,218)' type="default">150元</van-button>
+        <van-button bind:click="b1" plain color="{{color==11?'#7232dd':'rgb(218,218,218)'}}" type="default">50元</van-button>
+        <van-button bind:click="b2" plain color="{{color==22?'#7232dd':'rgb(218,218,218)'}}" type="default">100元</van-button>
+        <van-button bind:click="b3" plain color="{{color==33?'#7232dd':'rgb(218,218,218)'}}" type="default">150元</van-button>
     </view>
     <view class="inpDiv">
         <input type="text" maxlength="20" placeholder="自定义金额"> </input><text class="inp">元</text>

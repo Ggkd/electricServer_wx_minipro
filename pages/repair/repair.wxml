@@ -1,25 +1,13 @@
 <!--pages/repair/repair.wxml-->
 <view class="all">
-  <van-cell is-link bind:click="select1" title="家电" icon="tv-o" value="选择家点"/>
-  <van-field
-    value=""
-    placeholder="请输入故障原因"
-    label="原因"
-    left-icon="edit"
-  />
-  <van-cell is-link bind:click="select2" title="地址" icon="location-o" value="中国海洋大学"/>
-  <van-cell is-link bind:click="select3" class="cell3" title="时间" icon="underway-o" value="预约时间"/>
+  <van-cell is-link bind:click="select1" title="家电" icon="tv-o" value="{{s1}}" />
+  <van-field value="" class="name" placeholder="请输入故障原因" label="原因" left-icon="edit" />
+  <van-cell is-link bind:click="select2" title="地址" icon="location-o" value="{{s2}}" />
+  <van-cell is-link bind:click="select3" class="cell3" title="时间" icon="underway-o" value="{{s3}}" />
   <van-button type='info' large>开始预约</van-button>
 </view>
-<van-action-sheet
-  show="{{ show }}"
-  actions="{{ actions }}"
-  cancel-text="取消"
-  bind:cancel='can1'
-/>
-<van-action-sheet
-  show="{{ show1 }}"
-  actions="{{ actions1 }}"
-  cancel-text="取消"
-  bind:cancel='can2'
-/>
+<van-action-sheet show="{{ show }}" actions="{{ actions }}" cancel-text="取消" bind:cancel='can1' bind:select="s1" />
+<van-action-sheet show="{{ show1 }}" actions="{{ actions1 }}" cancel-text="取消" bind:cancel='can2' bind:select="s2" />
+<van-popup show="{{ show3 }}" bind:close="onClose">
+  <van-datetime-picker type="datetime" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:confirm='s3' bind:cancel="can3" />
+</van-popup>

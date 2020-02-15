@@ -13,7 +13,7 @@
   <view class="my">
     <view class="my-item flex-wrp">
       <view class="myitem-icon flex-item" >
-        <image src="../../images/eye.png"></image>
+        <image src="../../images/3.jpg"></image>
       </view>
       <view class="myitem-name flex-item">
         <text>会员</text>
@@ -21,39 +21,39 @@
     </view>
     <view class="my-item flex-wrp">
       <view class="myitem-icon flex-item" >
-        <image src="../../images/live.png"></image>
+        <image src="../../images/2.png"></image>
       </view>
       <view class="myitem-name flex-item">
-        <text>余额</text>
+        <text>余额<text class='f'>232.21</text></text>
       </view>
     </view>
     <view class="my-item flex-wrp" bindtap="navigatorBill">
       <view class="myitem-icon flex-item" >
-        <image src="../../images/draft.png"></image>
+        <image src="../../images/4.jpg"></image>
       </view>
       <view class="myitem-name flex-item">
         <text>账单</text>
       </view>
     </view>
-    <view class="my-item flex-wrp" bindtap="navigatorAddress">
+    <view class="my-item flex-wrp" bindtap="navigatorYue">
       <view class="myitem-icon flex-item" >
-        <image src="../../images/recent.png"></image>
+        <image  src="../../images/5.jpg"></image>
       </view>
       <view class="myitem-name flex-item">
-        <text>地址</text>
+        <text>预约</text>
       </view>
     </view>
     <view class="my-item flex-wrp">
       <view class="myitem-icon flex-item" >
-        <image src="../../images/book.png"></image>
+        <image src="../../images/1.png"></image>
       </view>
       <view class="myitem-name flex-item">
         <text>客服</text>
       </view>
     </view>
-    <view class="my-item flex-wrp">
-      <view class="myitem-icon flex-item" >
-        <image src="../../images/star.png"></image>
+    <view class="my-item flex-wrp" bindtap="back">
+      <view class="myitem-icon flex-item">
+        <image src="../../images/invite.png"></image>
       </view>
       <view class="myitem-name flex-item">
         <text>切换账号</text>

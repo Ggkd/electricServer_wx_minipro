@@ -1,18 +1,42 @@
 // pages/pay/pay.js
+let app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    color:11,
+    userInfo: {}
   },
-
+  b1(){
+    this.setData({
+      color:11
+    })
+  },
+  b2(){
+    this.setData({
+      color:22
+    })
+  },
+  b3(){
+    this.setData({
+      color:33
+    })
+  },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that = this
+    //调用应用实例的方法获取全局数据
+    app.getUserInfo(function (userInfo) {
+      //更新数据
+      that.setData({
+        userInfo: userInfo
+      })
+    })
   },
 
   /**

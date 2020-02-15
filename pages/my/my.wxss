@@ -189,3 +189,11 @@
 .container .feed-item .feed-content .answer-actions .dot ::after{
   content: "•";
 }
+.f{
+  display:inline-block;
+  margin-left:30px;
+  font-size:12px;
+  color:rgb(234,100,26);
+  position: relative;
+  top:-1px;
+}

@@ -3,9 +3,9 @@
     <van-icon name="manager" color="rgb(253,179,13)" size="30" /><text class="dianfei">电费</text>
 </view>
 <view class="payAll">
-    <van-cell class="vancell1" title="余额" value="84.6" />
-    <van-cell title="户号户名" value="{{userInfo.nickName}}" />
-    <van-cell title="住址信息" value="中国海洋大学" />
+    <van-cell class="vancell1" title="余额" value="{{yue}}" />
+    <van-cell title="户号户名" value="{{name}}" />
+    <van-cell title="住址信息" value="{{address}}" />
     <van-cell title="缴费单位" value="国网山东省电力公司" />
     <view class="jiaofei">
         <view class="j1">自动缴费</view>
@@ -22,12 +22,12 @@
         <van-button bind:click="b3" plain color="{{color==33?'#7232dd':'rgb(218,218,218)'}}" type="default">150元</van-button>
     </view>
     <view class="inpDiv">
-        <input type="text" maxlength="20" placeholder="自定义金额"> </input><text class="inp">元</text>
+        <input type="text" maxlength="20" bindblur="blur" bindfocus="focu" bindinput="getMoney" placeholder="自定义金额" value="{{inputValue}}"> </input><text class="inp">元</text>
     </view>
     
 </view>
 <view class="allBtn">
-    <van-button class="btn1" type="info">立即充值</van-button>
+    <van-button class="btn1" type="info" catchtap="pay">立即充值</van-button>
     <van-button class="btn2" plain hairline type="info">找人代缴</van-button>
 </view>
 

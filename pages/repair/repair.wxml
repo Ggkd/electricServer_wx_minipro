@@ -1,10 +1,13 @@
 <!--pages/repair/repair.wxml-->
 <view class="all">
-  <van-cell is-link bind:click="select1" title="家电" icon="tv-o" value="{{s1}}" />
-  <van-field value="" class="name" placeholder="请输入故障原因" label="原因" left-icon="edit" />
-  <van-cell is-link bind:click="select2" title="地址" icon="location-o" value="{{s2}}" />
+  <!-- <van-cell is-link bind:click="select1" title="家电" icon="tv-o" value="{{s1}}" /> -->
+  <van-field class="title" placeholder="请输入家电" label="家电" left-icon="tv-o" bind:input="getTitle" />
+  <van-field class="name" placeholder="请输入故障原因" label="原因" left-icon="edit" bind:input="getReason" />
+  <van-field class="title" placeholder="请输入地址" label="地址" left-icon="location-o" bind:input="getAddress" />
+  <!-- <van-cell is-link bind:click="select2" title="地址" icon="location-o" value="{{s2}}" /> -->
   <van-cell is-link bind:click="select3" class="cell3" title="时间" icon="underway-o" value="{{s3}}" />
-  <van-button type='info' large>开始预约</van-button>
+  <text class="resp">{{resp}}</text>
+  <van-button type='info' large catchtap="yuyue">开始预约</van-button>
 </view>
 <van-action-sheet show="{{ show }}" actions="{{ actions }}" cancel-text="取消" bind:cancel='can1' bind:select="s1" />
 <van-action-sheet show="{{ show1 }}" actions="{{ actions1 }}" cancel-text="取消" bind:cancel='can2' bind:select="s2" />

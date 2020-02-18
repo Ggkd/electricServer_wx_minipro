@@ -6,7 +6,46 @@ Page({
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+    userInfo: {},
+    userid:"",
+    name: "",
+    yue: 0,
+    show: false,
+    account:null
+  },
+
+  // 点击去查询进入账单页
+  searchToBill(){
+    wx.navigateTo({
+      url: '../bill/bill',
+    })
+  },
+
+  getAccount(e){
+    console.log(e.detail);
+    this.setData({
+      account: e.detail
+    })
+  },
+  // 点击查询
+  query(){
+    console.log(this.data.account)
+    wx.request({
+      url: 'http://localhost:8080/user/query',
+      data: {
+        userid: this.data.account,
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      method: "GET",
+      success: (res) => {
+        this.setData({
+          show: true,
+          yue: res.data
+        })
+      }
+    })
   },
 
   /**
@@ -34,7 +73,11 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let obj = wx.getStorageSync("user")
+    this.setData({
+      userid: obj.userid,
+      name: obj.name
+    })
   },
 
   /**

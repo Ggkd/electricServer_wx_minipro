@@ -8,19 +8,20 @@
     <van-image width="60px" height="60px" src="{{userInfo.avatarUrl}}" />
   </view>
   <view class="info">
-    <view class="info1">{{userInfo.nickName}}</view>
-    <text class="info2">15667853245</text>
+    <view class="info1">{{name}}</view>
+    <text class="info2">{{userid}}</text>
   </view>
   <view class="btn">
-    <van-button size="small" type="info">去查询</van-button>
+    <van-button size="small" type="info" catchtap="searchToBill">去查询</van-button>
   </view>
 </view>
 <view class="footer">
   <view class="inp">
-    <view class="font">输入户口查询</view>
-    <van-field placeholder="手动输入缴费户号查询账单" />
+    <view class="font">输入账号查询</view>
+    <van-field placeholder="手动输入缴费户号查询余额" bind:input="getAccount" />
   </view>
   <view>
-    <van-button size="small" type="info">去查询</van-button>
+    <van-button size="small" type="info" catchtap="query">去查询</van-button>
   </view>
+  <text wx-if="{{show}}">该账户余额：{{yue}}</text>
 </view>

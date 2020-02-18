@@ -5,7 +5,7 @@
       <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
     </view>
     <view class="user-info flex-item">
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      <text class="userinfo-nickname">{{name}}</text>
       <text class="edit">个人主页</text>
     </view>
   </view>
@@ -24,7 +24,7 @@
         <image src="../../images/2.png"></image>
       </view>
       <view class="myitem-name flex-item">
-        <text>余额<text class='f'>232.21</text></text>
+        <text>余额<text class='f'>{{yue}}</text></text>
       </view>
     </view>
     <view class="my-item flex-wrp" bindtap="navigatorBill">

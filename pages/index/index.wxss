@@ -42,3 +42,8 @@ page {
 .buttons button {
   margin: 10rpx 0;
 }
+
+.err {
+  color: red;
+  margin-left: 138px;
+}

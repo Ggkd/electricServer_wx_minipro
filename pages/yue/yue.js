@@ -20,92 +20,7 @@ Page({
 				name:'家电预约'
 			},
 		],
-		dishesList:[
-			[
-        {
-          "title": "维修电脑",
-          "detail": "电脑接电后无法开机",
-          "date": "2019-12-12",
-          "address": "青岛市胶州市青岛工学院",
-          "status": "预约中",
-        },
-        {
-          "title": "维修路由器",
-          "detail": "路由器无网络信号",
-          "date": "2019-10-12",
-          "address": "青岛市胶州市青岛工学院",
-          "status": "已维修",
-        },
-        {
-          "title": "维修空凋",
-          "detail": "空凋漏水",
-          "date": "2019-09-12",
-          "address": "青岛市胶州市青岛工学院",
-          "status": "已取消",
-        },
-        {
-          "title": "TCL电视",
-          "date": "2019-12-12",
-          "address": "青岛市胶州市青岛工学院",
-          "status": "预约中",
-        },
-        {
-          "title": "MacBook Pro",
-          "date": "2019-10-12",
-          "address": "青岛市胶州市青岛工学院",
-          "status": "已提供",
-        },
-        {
-          "title": "冰箱",
-          "date": "2019-09-12",
-          "address": "青岛市胶州市青岛工学院",
-          "status": "已取消",
-        },
-      ],
-			[
-        {
-          "title": "维修电脑",
-          "detail": "电脑接电后无法开机",
-          "date": "2019-12-12",
-          "address": "青岛市胶州市青岛工学院",
-          "status": "预约中",
-        },
-        {
-          "title": "维修路由器",
-          "detail": "路由器无网络信号",
-          "date": "2019-10-12",
-          "address": "青岛市胶州市青岛工学院",
-          "status": "已维修",
-        },
-        {
-          "title": "维修空凋",
-          "detail": "空凋漏水",
-          "date": "2019-09-12",
-          "address": "青岛市胶州市青岛工学院",
-          "status": "已取消",
-        },
-			],
-      [
-        {
-          "title": "TCL电视",
-          "date": "2019-12-12",
-          "address": "青岛市胶州市青岛工学院",
-          "status": "预约中",
-        },
-        {
-          "title": "MacBook Pro",
-          "date": "2019-10-12",
-          "address": "青岛市胶州市青岛工学院",
-          "status": "已提供",
-        },
-        {
-          "title": "冰箱",
-          "date": "2019-09-12",
-          "address": "青岛市胶州市青岛工学院",
-          "status": "已取消",
-        },
-      ],
-		],
+		dishesList:[],
 		dishes:[]
 	},
 	loadingChange () {
@@ -159,6 +74,24 @@ Page({
 		})
 	},
 	onLoad () {
-		this.loadingChange()
+		this.loadingChange();
+    wx.request({
+      url: 'http://localhost:8080/appointment/appointmentInfo?userid=zhangsan',
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      method: "GET",
+      success: (res) => {
+        // console.log("3131",res.data[0][0]["date"])
+        this.setData({
+          dishesList: res.data
+        })
+
+      },
+      fail(res) {
+        console.log("99999")
+        console.log(res)
+      }
+    })
 	}
 })

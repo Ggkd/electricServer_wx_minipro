@@ -7,8 +7,8 @@
 				<i-icon type="addressbook" color="green" size="30" />
 			</view>
 			<view class="yue">
-				<text class="yue1">{{userInfo.nickName}}</text>
-				<view class="yue2">电费余额：232元</view>
+				<text class="yue1">{{name}}</text>
+				<view class="yue2">电费余额：{{yue}}元</view>
 			</view>
 			<view>
 				<mp-icon icon="arrow" color="gray" size="{{15}}"></mp-icon>

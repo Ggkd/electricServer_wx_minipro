@@ -1,9 +1,12 @@
 <!--pages/electric/electric.wxml-->
 <view class="all">
-  <van-field value="" placeholder="请输入家点名称" label="家电" left-icon="home-o" class="name" />
-  <van-cell is-link bind:click="select2" title="地址" icon="location-o" value="{{s2}}" />
+  <van-field placeholder="请输入家电名称" label="家电" left-icon="home-o" class="name" bind:input="getTitle" />
+  <van-field placeholder="请输入地址" label="地址" left-icon="location-o" class="address" bind:input="getAddress" />
+  <!-- <van-cell is-link bind:click="select2" title="地址" icon="location-o" value="{{s2}}" /> -->
+ 
   <van-cell is-link bind:click="select3" class="cell3" title="时间" icon="underway-o" value="{{s3}}" />
-  <van-button type='info' large>开始预约</van-button>
+  <text class="resp">{{resp}}</text>
+  <van-button type='info' large catchtap="yuyue">开始预约</van-button>
   <text class="font">该服务由青岛电力服务有限公司提供，其电网提供在线购买新电服务哦</text>
 </view>
 

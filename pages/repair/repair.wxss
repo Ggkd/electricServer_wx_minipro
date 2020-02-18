@@ -16,3 +16,11 @@
 .name .van-field__input {
   margin-left: 90px;
 }
+
+.title .van-field__input {
+  margin-left: 120px;
+}
+
+.resp{
+  margin-left: 100px;
+}

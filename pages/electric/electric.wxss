@@ -28,3 +28,11 @@
 .van-cell__value {
   margin-left: -48px;
 }
+
+.address .van-field__input{
+  margin-left: 150px;
+}
+
+.resp{
+  margin-left: 100px;
+}

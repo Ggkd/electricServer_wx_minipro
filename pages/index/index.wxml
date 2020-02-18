@@ -11,7 +11,7 @@
         />
         <input 
         class="username" 
-        name="username"
+        name="account"
         placeholder="请输入账号" 
         />
       <input 
@@ -21,6 +21,7 @@
         placeholder="请输入密码" 
         />
     </view>
+    <text class="err" wx:if="{{errShow}}">输入信息有误</text>
     <view class="buttons">
       <button type="primary" form-type="submit" bindTap='navigatorIndex'>登陆</button>
       <button type="default">注册</button>

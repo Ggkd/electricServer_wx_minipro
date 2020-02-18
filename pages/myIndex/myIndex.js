@@ -1,14 +1,15 @@
 // pages/myIndex/myIndex.js
-import Toast from '../../dist1/toast/toast';
 let app = getApp();
+import Toast from '../../dist1/toast/toast';
+
 Page({
-
-
   /**
    * 页面的初始数据
    */
   data: {
-    userInfo: {}
+    userInfo: {},
+    name: "",
+    yue: 0
   },
   t(){
     Toast('正在开发中~');
@@ -17,14 +18,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var that = this
-    //调用应用实例的方法获取全局数据
-    app.getUserInfo(function (userInfo) {
-      //更新数据
-      that.setData({
-        userInfo: userInfo
-      })
-    })
+
   },
 
   /**
@@ -38,7 +32,23 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    let obj = wx.getStorageSync("user")
+    wx.request({
+      url: 'http://localhost:8080/user/query',
+      data: {
+        userid: obj.userid,
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      method: "GET",
+      success: (res) => {
+        this.setData({
+          name: obj.name,
+          yue: res.data
+        })
+      }
+    })
   },
 
   /**

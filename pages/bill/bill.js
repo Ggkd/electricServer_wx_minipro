@@ -43,7 +43,7 @@ Page({
 			curIndex:index
 		})
 	},
-	// 选择菜品
+	// 选择菜单
 	selectDish (event) {
 		let dish = event.currentTarget.dataset.dish;
 		let flag = true;
@@ -79,13 +79,21 @@ Page({
 	},
 	onLoad () {
 		this.loadingChange();
+    
+	},
+  onShow: function () {
+    let obj = wx.getStorageSync("user");
     wx.request({
-      url: 'http://localhost:8080/bill/billInfo?userid=zhangsan',
+      url: 'http://localhost:8080/bill/billInfo',
+      data: {
+        userid: obj.userid
+      },
       header: {
         'content-type': 'application/json' // 默认值
       },
       method: "GET",
-      success : (res) => {
+      success: (res) => {
+        console.log(res)
         this.setData({
           dishesList: res.data
         })
@@ -95,5 +103,5 @@ Page({
         console.log(res)
       }
     })
-	}
+  },
 })

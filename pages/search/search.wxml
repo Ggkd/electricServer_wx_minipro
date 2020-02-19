@@ -23,5 +23,7 @@
   <view>
     <van-button size="small" type="info" catchtap="query">去查询</van-button>
   </view>
-  <text wx-if="{{show}}">该账户余额：{{yue}}</text>
 </view>
+<view>
+  <text class="msg">{{msg}}</text>
+  </view>

@@ -11,7 +11,7 @@
 </view>
 
 
-<van-action-sheet show="{{ show1 }}" actions="{{ actions1 }}" cancel-text="取消" bind:cancel='can2' bind:select="s2" />
+<!-- <van-action-sheet show="{{ show1 }}" actions="{{ actions1 }}" cancel-text="取消" bind:cancel='can2' bind:select="s2" /> -->
 <van-popup show="{{ show3 }}" bind:close="onClose">
   <van-datetime-picker type="datetime" value="{{ currentDate }}" min-date="{{ minDate }}" max-date="{{ maxDate }}" bind:confirm='s3' bind:cancel="can3" />
 </van-popup>

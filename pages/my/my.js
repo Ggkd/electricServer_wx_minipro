@@ -2,17 +2,17 @@ var util = require('../../utils/util.js')
 var app = getApp()
 Page({
   data: {
-    motto: 'Hello World',
+    // motto: 'Hello World',
     userInfo: {},
     yue: null,
     name: null
   },
   //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: ''
-    })
-  },
+  // bindViewTap: function() {
+  //   wx.navigateTo({
+  //     url: ''
+  //   })
+  // },
   onLoad: function () {
     
   },

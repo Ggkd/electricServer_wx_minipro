@@ -9,66 +9,75 @@ Page({
     color:11,
     userInfo: {},
     userid:null,
-    name:null,
+    userIdName:null,
     yue:null,
     address: null,
     money:50,
-    inputValue:"",
-    isSelect: true
+    resp: ""
   },
+
+  // 选择三个固定金额的事件
   b1(){
     this.setData({
       color:11,
       money: 50,
-      isSelect: true
     })
   },
   b2(){
     this.setData({
       color:22,
       money: 100,
-      isSelect: true
     })
   },
   b3(){
     this.setData({
       color:33,
       money: 150,
-      isSelect: true
     })
   },
 
-
-  // 获取自定义的金额
-  getMoney(e){
-    this.setData({
-      money: e.detail.value
-    })
-  },
 
   // 光标在输入框时
   focu(){
     this.setData({
       money: 0,
       color: 0,
-      isSelect: false
       }
     )
   },
 
   // 当光标失去焦点时
   blur(e){
-    console.log(this.data.isSelect)
-    if (this.data.isSelect) {
-      this.setData({
-        inputValue: ""
-      })
-    }
+    this.setData({
+      money: e.detail.value
+    })
   },
 
   // 点击充值
   pay(){
     console.log(this.data.money)
+    wx.request({
+      url: 'http://localhost:8080/user/pay',
+      data: {
+        userid: this.data.userid,
+        money: this.data.money
+      },
+      header: {
+        'content-type': 'application/json' // 默认值
+      },
+      method: "POST",
+      success: (res) => {
+        console.log(res)
+        this.setData({
+          resp: "缴费成功"
+        })
+      },
+      fail : (res) => {
+        this.setData({
+          resp: "缴费失败，请刷新重试"
+        })
+      }
+    })
   },
 
   /**
@@ -90,10 +99,6 @@ Page({
    */
   onShow: function () {
     let obj = wx.getStorageSync("user")
-    this.setData({
-      userid: obj.userid,
-      name: obj.name
-    });
     wx.request({
       url: 'http://localhost:8080/user/query',
       data: {
@@ -104,9 +109,12 @@ Page({
       },
       method: "GET",
       success: (res) => {
+        // console.log(res)
         this.setData({
           yue: res.data,
-          address: res.address
+          address: obj.address,
+          userIdName: obj.userid+"("+obj.name+")",
+          userid: obj.userid
         })
       }
     })

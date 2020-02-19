@@ -65,3 +65,6 @@
   font-weight: 550;
   font-size:17px;
 }
+.msg{
+  margin-left: 20px;
+}

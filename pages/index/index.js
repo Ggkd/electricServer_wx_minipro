@@ -33,8 +33,9 @@ Page({
 
       let name = res.data.object.username
       let userid = res.data.object.userid
+      let address = res.data.object.address
           // 将数据缓存
-      let obj = { "name": name, "userid":userid}
+      let obj = { "name": name, "userid":userid, "address": address}
           wx.setStorage({
             key: "user",
             data: obj,

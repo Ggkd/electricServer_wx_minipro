@@ -11,8 +11,8 @@ Page({
     userid: null,
     reason:null,
     resp: "",
-    s1:'选择家电',
-    s2:'选择地址',
+    // s1:'选择家电',
+    // s2:'选择地址',
     s3:"预约时间",
     show: false,
     show3:false,
@@ -21,73 +21,73 @@ Page({
     minDate: new Date().getTime(),
     maxDate: new Date(2025, 12, 31).getTime(),
     currentDate: new Date().getTime(),
-    actions: [
-      {
-        name: '电视'
-      },
-      {
-        name: '冰箱'
-      },
-      {
-        name: '微波炉',
-      }
-    ],
-    show1: false,
-    actions1: [
-      {
-        name: '青岛工学院'
-      },
-      {
-        name: '青岛工学院南门'
-      },
-      {
-        name: '青岛工学院北门',
-      }
-    ]
+    // actions: [
+    //   {
+    //     name: '电视'
+    //   },
+    //   {
+    //     name: '冰箱'
+    //   },
+    //   {
+    //     name: '微波炉',
+    //   }
+    // ],
+    // show1: false,
+    // actions1: [
+    //   {
+    //     name: '青岛工学院'
+    //   },
+    //   {
+    //     name: '青岛工学院南门'
+    //   },
+    //   {
+    //     name: '青岛工学院北门',
+    //   }
+    // ]
   },
-  select1(){
-    this.setData({ show: true });
-  },
-  can1(){
-    this.setData({show:false});
-  },
-  select2(){
-    this.setData({ show1: true });
-  },
-  can2(){
-    this.setData({show1:false});
-  },
+  // select1(){
+  //   this.setData({ show: true });
+  // },
+  // can1(){
+  //   this.setData({show:false});
+  // },
+  // select2(){
+  //   this.setData({ show1: true });
+  // },
+  // can2(){
+  //   this.setData({show1:false});
+  // },
   select3(){
     this.setData({ show3: true });
   },
   can3(){
     this.setData({show3:false});
   },
-  showPopup() {
-    this.setData({ show3: true });
-  },
+  // showPopup() {
+  //   this.setData({ show3: true });
+  // },
 
-  onClose() {
-    this.setData({ show3: false });
-  },
-  onInput(event) {
-    this.setData({
-      currentDate: event.detail
-    });
-  },
-  s1(e){
-    this.setData({
-      s1:e.detail.name,
-      show:false
-    })
-    console.log(e)
-  },
-  s2(e){
-    this.setData({
-      s2:e.detail.name,
-      show1:false
-    })
-  },
+  // onClose() {
+  //   this.setData({ show3: false });
+  // },
+  // onInput(event) {
+  //   this.setData({
+  //     currentDate: event.detail
+  //   });
+  // },
+  // s1(e){
+  //   this.setData({
+  //     s1:e.detail.name,
+  //     show:false
+  //   })
+  //   console.log(e)
+  // },
+  // s2(e){
+  //   this.setData({
+  //     s2:e.detail.name,
+  //     show1:false
+  //   })
+  // },
   s3(e){
     console.log(new Date(e.detail))
     var date = new Date(e.detail);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
@@ -145,6 +145,7 @@ Page({
         userid: this.data.userid,
         address: this.data.address,
         detail: this.data.reason,
+        yydate: this.data.date,
         type: "1"
       },
       header: {
@@ -153,15 +154,15 @@ Page({
       method: "POST",
       success: (res) => {
         // console.log(res)
-        if (res.data.code == 0) {
-          console.log("faild")
+        if (!res.data) {
           this.setData({
             resp: "预约失败，请重新预约"
           });
+        }else{
+          this.setData({
+            resp: "预约成功"
+          });
         }
-        this.setData({
-          resp: "预约成功"
-        });
       },
       fail: (res) => {
         this.setData({

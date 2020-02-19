@@ -2,7 +2,7 @@
 var app = getApp()
 Page({
 
-  /**
+  /** 
    * 页面的初始数据
    */
   data: {
@@ -10,8 +10,8 @@ Page({
     userid:"",
     name: "",
     yue: 0,
-    show: false,
-    account:null
+    account:null,
+    msg: ""
   },
 
   // 点击去查询进入账单页
@@ -22,14 +22,12 @@ Page({
   },
 
   getAccount(e){
-    console.log(e.detail);
     this.setData({
       account: e.detail
     })
   },
   // 点击查询
   query(){
-    console.log(this.data.account)
     wx.request({
       url: 'http://localhost:8080/user/query',
       data: {
@@ -40,10 +38,16 @@ Page({
       },
       method: "GET",
       success: (res) => {
-        this.setData({
-          show: true,
-          yue: res.data
-        })
+        console.log(res)
+        if (res.data) {
+          this.setData({
+            msg: "该账户余额：" + res.data,
+          })
+        }else{
+          this.setData({
+            msg: "查询的账户不存在",
+          })
+        }
       }
     })
   },

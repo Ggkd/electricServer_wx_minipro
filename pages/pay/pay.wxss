@@ -89,3 +89,8 @@ input{
 .allBtn .van-button--hairline:after{
   border:none;
 }
+
+.resp{
+  margin-left: 104px;
+  margin-top: -23px;
+}

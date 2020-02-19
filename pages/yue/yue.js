@@ -39,7 +39,7 @@ Page({
 			curIndex:index
 		})
 	},
-	// 选择菜品
+	// 选择菜单
 	selectDish (event) {
 		let dish = event.currentTarget.dataset.dish;
 		let flag = true;
@@ -75,23 +75,28 @@ Page({
 	},
 	onLoad () {
 		this.loadingChange();
+    
+	},
+  onShow: function () {
+    let obj = wx.getStorageSync("user")
     wx.request({
-      url: 'http://localhost:8080/appointment/appointmentInfo?userid=zhangsan',
+      url: 'http://localhost:8080/appointment/appointmentInfo',
+      data: {
+        userid: obj.userid
+      },
       header: {
         'content-type': 'application/json' // 默认值
       },
       method: "GET",
       success: (res) => {
-        // console.log("3131",res.data[0][0]["date"])
         this.setData({
           dishesList: res.data
         })
 
       },
       fail(res) {
-        console.log("99999")
         console.log(res)
       }
     })
-	}
+  },
 })

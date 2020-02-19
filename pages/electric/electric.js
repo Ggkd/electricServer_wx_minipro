@@ -10,7 +10,6 @@ Page({
     date: null,
     userid:null,
     resp:"",
-    s2:'选择网点',
     s3:"最快3小时可取",
     show: false,
     show3:false,
@@ -19,52 +18,51 @@ Page({
     minDate: new Date().getTime(),
     maxDate: new Date(2025, 12, 31).getTime(),
     currentDate: new Date().getTime(),
-    show: false,
-    show1: false,
-    actions1: [
-      {
-        name: '青岛工学院1宿'
-      },
-      {
-        name: '青岛工学院2宿'
-      },
-      {
-        name: '青岛工学院3宿',
-      }
-    ],
-    show2: false,
+    // show1: false,
+    // actions1: [
+    //   {
+    //     name: '青岛工学院1宿'
+    //   },
+    //   {
+    //     name: '青岛工学院2宿'
+    //   },
+    //   {
+    //     name: '青岛工学院3宿',
+    //   }
+    // ],
+    // show2: false,
   },
-  select2(){
-    this.setData({ show1: true });
-  },
-  can2(){
-    this.setData({show1:false});
-  },
+  // select2(){
+  //   this.setData({ show1: true });
+  // },
+  // can2(){
+  //   this.setData({show1:false});
+  // },
   select3(){
     this.setData({ show3: true });
   },
   can3(){
     this.setData({show3:false});
   },
-  showPopup() {
-    this.setData({ show3: true });
-  },
+  // showPopup() {
+  //   this.setData({ show3: true });
+  // },
 
-  onClose() {
-    this.setData({ show3: false });
-  },
-  onInput(event) {
-    this.setData({
-      currentDate: event.detail
-    });
-  },
+  // onClose() {
+  //   this.setData({ show3: false });
+  // },
+  // onInput(event) {
+  //   this.setData({
+  //     currentDate: event.detail
+  //   });
+  // },
 
-  s2(e){
-    this.setData({
-      s2:e.detail.name,
-      show1:false
-    })
-  },
+  // s2(e){
+  //   this.setData({
+  //     s2:e.detail.name,
+  //     show1:false
+  //   })
+  // },
   s3(e){
     console.log(new Date(e.detail))
     var date = new Date(e.detail);//时间戳为10位需*1000，时间戳为13位的话不需乘1000
@@ -112,6 +110,7 @@ Page({
         name: this.data.title,
         userid: this.data.userid,
         address: this.data.address,
+        yydate: this.data.date,
         type: "2"
       },
       header: {
@@ -119,16 +118,16 @@ Page({
       },
       method: "POST",
       success: (res) => {
-        // console.log(res)
-        if (res.data.code == 0) {
-          console.log("faild")
+        console.log(res)
+        if (!res.data) {
           this.setData({
             resp: "预约失败，请重新预约"
           });
+        }else{
+          this.setData({
+            resp: "预约成功"
+          });
         }
-        this.setData({
-          resp: "预约成功"
-        });
       },
       fail : (res) => {
         this.setData({

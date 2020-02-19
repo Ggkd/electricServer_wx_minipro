@@ -1,19 +1,14 @@
 {
   "pages": [
-      "pages/pay/pay",
+    "pages/index/index",
+    "pages/myIndex/myIndex",
+    "pages/logs/logs",
+    "pages/pay/pay",
     "pages/repair/repair",
+    "pages/my/my",
     "pages/electric/electric",
     "pages/search/search",
-   "pages/myIndex/myIndex",
-    "pages/index/index",
-    "pages/logs/logs",
-    
-  
-    
-   
-   
     "pages/bill/bill",
-    "pages/my/my",
     "pages/address/address",
     "pages/success/success",
     "pages/yue/yue"
